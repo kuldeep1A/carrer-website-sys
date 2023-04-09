@@ -31,7 +31,7 @@ JOBS = [
 def hello_k():
     return render_template("home.html", jobs=JOBS)
 
-@app.route("/jobs")
+@app.route("/api/jobs")
 def list_jobs():
     return jsonify(JOBS)
 
