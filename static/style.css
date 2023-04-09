@@ -1,40 +1,5 @@
-body {
-    color: #40514E;
-    margin: 0;
-    text-align: center;
-    font-family: cursive;
-    }
-    
-    h1 {
-        font-size: 50px;
-    }
-    
-    .logo {
-        max-width: 50%;
-        border: solid gray;
-        border-radius: 10px;
-    }
-    
-    
-    .container {
-        max-width: 75%;
-        margin: 0 auto;
-    
-    }
-    
-    #block {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #Job_name {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 25px;
-    }
-    
-    #Job_location {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 15px;
+#banner{
+    height: 360px;
+    width: 100%;
+    object-fit: cover;
 }
-
