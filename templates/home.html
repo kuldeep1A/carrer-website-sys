@@ -17,33 +17,31 @@
   <body>
     {% include 'nav.html' %}
     <img
-        class="img-fluid"
-        id="banner"
-        src="/static/banner.jpg"
-        alt="Big Logo"
-      />
+      class="img-fluid"
+      id="banner"
+      src="/static/banner.jpg"
+      alt="Big Logo"
+    />
     <div class="container">
       <h1 class="text-center mt-2 mb-4">Manasa Carrer</h1>
-      
       <hr />
-      <div class="about">
-        <h2 class="text-center mt-2 mb-4">About Manasa</h2>
-        <p class="lead">
-          It is a major town in Neemuch district of Madhya Pradesh. Manasa is a
-          seat of the legislative assembly. It is tehsil headquarters. The town
-          is well connected by road from Mandsaur, Neemuch and also to Kota via
-          Bhanpura. It was under the princely state of Holker before
-          independence.
-        </p>
+      <div class="row">
+        <div class="col-6">
+          <p class="lead">
+            It is a major town in Neemuch district of Madhya Pradesh. Manasa is
+            a seat of the legislative assembly. It is tehsil headquarters. The
+            town is well connected by road from Mandsaur, Neemuch and also to
+            Kota via Bhanpura. It was under the princely state of Holker before
+            independence.
+          </p>
+        </div>
+        <div class="col-6">
+          <img src="/static/Badrivishal_Mandir.jpg" alt="Badrivishal_Mandier" />
+        </div>
       </div>
       <hr />
       <h2 class="text-center mt-2 mb-4">Job Opening</h2>
-      <div>
-        {% for job in jobs %}
-        {% include 'jobitem.html' %}
-        
-        {% endfor %}
-      </div>
+      <div>{% for job in jobs %} {% include 'jobitem.html' %} {% endfor %}</div>
       <div class="text-center">
         <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
         <p>Copyright 2023, Manasa Carrer</p>
