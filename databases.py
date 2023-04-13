@@ -10,12 +10,13 @@ engine = create_engine(
         }
     }
 ) 
-# jobs = []
+def load_jobs_from_db():
+    jobs = [] 
+    with engine.connect() as conn:
+        result = conn.execute(text("select * from jobs"))
+        
+        for row in result.all():
+            jobs.append(row._asdict())
+        
+    return jobs
 
-# with engine.connect() as conn:
-#     result = conn.execute(text("select * from jobs"))
-#     for row in result.all():
-#         jobs.append(row._asdict())
-    
-
-# print(jobs)
