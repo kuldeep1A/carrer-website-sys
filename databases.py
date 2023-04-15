@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 from sqlalchemy import create_engine
 
 db_conn_string = "mysql+pymysql://pgi0lvar9ob7uq60gesa:pscale_pw_MSwMiGIPmiLzUcYMXOGuc6QYg3HEH6VMzmx8XKb7irv@aws.connect.psdb.cloud/career_website?charset=utf8mb4"
+=======
+from sqlalchemy import create_engine, text
+import os
+db_conn_string = os.environ.get["DB_CONNECTION_STRING"]
+>>>>>>> 18a1ed1 (chnages)
 
 engine = create_engine(
     db_conn_string,
