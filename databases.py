@@ -14,7 +14,7 @@ DATABASE= os.getenv("DATABASE")
 #  i am using secret key in over program
 db_conn_string = f"mysql+pymysql://{USERNAME}:{PASSWORD}@{HOST}/{DATABASE}?charset=utf8mb4"
 # print(db_conn_string)
->>>>>>> df5e2599aea48a565bc04e62236e39bb1550f2a6
+
 
 engine = create_engine(
     db_conn_string,
