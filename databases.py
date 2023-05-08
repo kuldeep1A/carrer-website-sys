@@ -1,12 +1,20 @@
-<<<<<<< HEAD
-from sqlalchemy import create_engine
-
-
-=======
-from sqlalchemy import create_engine, text
 import os
-db_conn_string = os.environ.get["DB_CONNECTION_STRING"]
->>>>>>> 18a1ed1 (chnages)
+from sqlalchemy import create_engine, text
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+HOST= os.getenv("HOST")
+USERNAME= os.getenv("USERNAMEs")
+PASSWORD= os.getenv("PASSWORD")
+DATABASE= os.getenv("DATABASE")
+
+
+#  i am using secret key in over program
+db_conn_string = f"mysql+pymysql://{USERNAME}:{PASSWORD}@{HOST}/{DATABASE}?charset=utf8mb4"
+# print(db_conn_string)
+>>>>>>> df5e2599aea48a565bc04e62236e39bb1550f2a6
 
 engine = create_engine(
     db_conn_string,
